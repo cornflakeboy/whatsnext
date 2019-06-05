@@ -1,5 +1,6 @@
-import { applyMiddleware, combineReducers, createStore, Store as ReduxStore } from 'redux';
+import { combineReducers, createStore, Store as ReduxStore } from 'redux';
 import { connectBrowserEvents } from './connectBrowserEvents';
+import { projectReducer } from './project/projectReducer';
 import { ProjectSlice } from './project/projectSlice';
 
 
@@ -18,8 +19,8 @@ export const buildStore = (preloadedState: State = undefined) => {
   return connectBrowserEvents(
     createStore(
       rootReducer,
-      preloadedState,
-      applyMiddleware(asyncMiddleware)
+      preloadedState/*,
+      applyMiddleware(asyncMiddleware)*/
     )
   );
 };

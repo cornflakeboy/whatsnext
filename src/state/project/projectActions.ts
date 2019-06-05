@@ -13,4 +13,4 @@ export interface ProjectActions {
 export type ProjectAction = ProjectActions[keyof ProjectActions];
 
 /**  */
-export type ProjectActionType = ProjectActions[keyof ProjectActions]['type'];
+export type ProjectActionType = ProjectAction['type'];

@@ -1,5 +1,5 @@
 import { ProjectAction } from './projectActions';
-import { defaultProjectSlice, Minister, ProjectSlice, TodoItem } from './projectSlice';
+import { defaultProjectSlice, ProjectSlice } from './projectSlice';
 
 
 export const projectReducer = (slice: ProjectSlice = defaultProjectSlice, action: ProjectAction): ProjectSlice => {
@@ -7,27 +7,35 @@ export const projectReducer = (slice: ProjectSlice = defaultProjectSlice, action
 
     /**  */
     case 'ADD_MINISTER': {
-      const newMinister: Minister = {
-        id: '',
-        name: '',
-        color: '',
-        description: '',
-        iconId: '',
-      };
       return {
         ...slice,
         ministers: [
           ...slice.ministers,
-          newMinister,
+          {
+            id: '',
+            name: '',
+            color: '',
+            description: '',
+            iconId: '',
+          },
         ],
       };
     }
 
     /**  */
     case 'ADD_TODO_ITEM': {
-      const newTodoItem: TodoItem = {
-        id:
-      }
+      return {
+        ...slice,
+        todoItems: [
+          ...slice.todoItems,
+          {
+            id: '',
+            name: '',
+            description: '',
+            ratingByMinisterId: {},
+          },
+        ],
+      };
     }
 
     /**  */

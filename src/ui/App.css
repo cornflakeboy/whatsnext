@@ -1,0 +1,20 @@
+
+.app-gridContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: 100%;
+}
+
+.app-gridItem.app-ministerSlot {
+  grid-column-start: 1
+}
+
+.app-gridItem.app-todoSlot {
+  grid-column-start: 2
+}
+
+.app-gridItem.app-detailSlot {
+  grid-column-start: 3
+}
