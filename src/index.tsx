@@ -4,4 +4,4 @@ import './baseline.css';
 import { App } from './ui/App';
 
 
-render(<App/>, document.body);
+render(<App/>, document.getElementById('app-root'));
